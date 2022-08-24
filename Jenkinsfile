@@ -1,21 +1,20 @@
 pipeline {
   agent any
-  Parameter{
+  Parameters{
     FileParameter 'newtext.txt'
   }
     
   stages {
       stage ("build"){
           steps{
-            echo "Build success"
-            
+              echo "Build success"
            }
       }
-    stage("upload") {
-      steps{
-          WithFileParameter ('newtext.txt')
-          sh 'cat $newtext.txt'
+      stage("upload") {
+          steps{
+              WithFileParameter ('newtext.txt')
+              sh 'cat $newtext.txt'
+        ` }
       }
-        }
-  }
+    }
 }
