@@ -1,7 +1,7 @@
 pipeline {
   agent any
   Parameter{
-    File Parameter 'file_path'
+    FileParameter 'file_path'
   }
     
   stages {
