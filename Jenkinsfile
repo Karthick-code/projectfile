@@ -9,7 +9,7 @@ pipeline {
           steps{
             echo "Build success"
             WithFileParameter ('file_path')
-            echo $ file_path
+            sh 'cat $file_path'
            }
       }
   }
