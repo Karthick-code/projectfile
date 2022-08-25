@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    Parameters{
+        File 'newtext.txt'
+    
+    }
 
     stages {
         stage('Build') {
