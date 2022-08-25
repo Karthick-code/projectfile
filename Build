@@ -1,6 +1,6 @@
 properties([
     parameters([
-        Fileparameter (filelocation 'newtext.txt' )
+        Fileparameter (filelocation "$newtext.txt" )
     ])
 ])
 node {
