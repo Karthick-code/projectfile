@@ -12,7 +12,7 @@ pipeline {
                 echo 'upload success' 
                 WithFileParameter ('newtext.txt')
                 sh 'cat $newtext.txt'
-        ` }
-      }
+            }
+        }
     }
 }
