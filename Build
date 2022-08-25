@@ -15,7 +15,7 @@ pipeline {
         stage("upload") {
             steps{
                 
-                echo "$inputfile"
+                echo "$File"
             }
         }
     }
