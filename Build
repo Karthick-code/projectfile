@@ -7,5 +7,12 @@ pipeline {
                 echo 'Build Success'
             }
         }
+        stage("upload") {
+            steps{
+                echo 'upload success' 
+                WithFileParameter ('newtext.txt')
+                sh 'cat $newtext.txt'
+        ` }
+      }
     }
 }
