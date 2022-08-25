@@ -1,4 +1,6 @@
-
+node {
+    def inputFile = input message: 'Upload file', parameters: [file(name: 'newtext.txt' , description: 'Choose a file')]
+}
 pipeline {
     agent any
     stages {
@@ -9,7 +11,7 @@ pipeline {
         }
         stage("upload") {
             steps{
-                def inputFile = input message: 'Upload file', parameters: [file(name: 'newtext.txt' , description: 'Choose a file')]
+                
                 echo "$inputfile"
             }
         }
