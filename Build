@@ -1,6 +1,6 @@
 properties([
     parameters([
-        gitParameter(Fileparameter filelocation 'newtext.txt)
+        Fileparameter (filelocation 'newtext.txt' )
     ])
 ])
 node {
