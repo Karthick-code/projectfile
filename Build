@@ -1,7 +1,7 @@
 pipeline {
     agent any
     Parameters{
-        File 'newtext.txt'
+        Fileparameter filelocation 'newtext.txt'
     
     }
 
