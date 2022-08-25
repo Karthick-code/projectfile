@@ -1,7 +1,8 @@
 pipeline {
   agent any
   Parameters{
-    Base64File 'newtext.txt'
+    File 'newtext.txt'
+    
   }
     
   stages {
