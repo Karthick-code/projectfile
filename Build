@@ -1,11 +1,4 @@
-properties([
-    parameters([
-        Fileparameter (filelocation: "$newtext.txt" )
-    ])
-])
-node {
-    Fileparameter filelocation "$newtext.txt"
-}
+
 pipeline {
     agent any
     stages {
@@ -16,9 +9,8 @@ pipeline {
         }
         stage("upload") {
             steps{
-                echo 'upload success' 
-                WithFileParameter ('newtext.txt')
-                sh 'cat $newtext.txt'
+                def inputFile = input message: 'Upload file', parameters: [file(name: 'newtext.txt')]
+                echo "$inputfile"
             }
         }
     }
