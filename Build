@@ -1,4 +1,4 @@
-File=/home/karthi/Documentation/newtext.txt
+def File=/home/karthi/Documentation/newtext.txt
 node {
     withFileParameter('File') {
         sh 'cat $File'
